@@ -8,7 +8,8 @@ import java.util.ArrayList;
 public class CollectionsMain {
 
     public static void main(String[] args) {
-        dataStructure();
+        //dataStructure();
+        arrayList();
     }
 
     private static void dataStructure() {
@@ -16,8 +17,18 @@ public class CollectionsMain {
         al.add("Phuc devs");
         al.add(1);
         al.add(3.0);
-        al.add(new Employee("Tony"));
-        Employee e = (Employee) al.get(3);
-        System.out.println(e.getName()); // Tony
+        al.add(new Car("Tesla"));
+        Car c = (Car) al.get(3);
+        System.out.println(c.getName()); // Tesla
+    }
+
+    private static void arrayList() {
+        ArrayList al = new ArrayList(30);
+        al.add("John");
+        al.add(1);
+        al.add(true);
+        System.out.println(al); // [John, 1, true]
+        al.remove(1);
+        System.out.println(al); // [John, true]
     }
 }

@@ -3,11 +3,11 @@ package com.phucdevs.collections;
 /**
  * @author Phuc.Le
  */
-public class Employee {
+public class Car {
 
     private String name;
 
-    public Employee(String name) {
+    public Car(String name) {
         this.name = name;
     }
 

@@ -2,6 +2,7 @@ package com.phucdevs.collections;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Vector;
 
 /**
  * @author Phuc.Le
@@ -26,10 +27,11 @@ public class CollectionsMain {
     private static void interfactList() {
         arrayList();
         linkedList();
+        vector();
     }
 
     private static void arrayList() {
-        ArrayList al = new ArrayList(30);
+        ArrayList al = new ArrayList(30); // default size: 10, resize: x1.5
         al.add("John");
         al.add(1);
         al.add(true);
@@ -57,5 +59,17 @@ public class CollectionsMain {
         ll.addFirst(1);
         ll.addLast(2);
         System.out.println(ll); // [1, John, 12, true, 2]
+    }
+
+    private static void vector() {
+        Vector v = new Vector(); // default size: 10, resize: x2
+        Vector vec = new Vector(60);
+        Vector vec1 = new Vector(100, 5);
+
+        v.add(10);
+        v.addElement("John");
+        System.out.println(v); // [10, John]
+        v.remove(0); // [John]
+        System.out.println(v.elementAt(0)); // John
     }
 }

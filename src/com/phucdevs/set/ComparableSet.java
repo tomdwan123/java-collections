@@ -5,7 +5,7 @@ import java.util.TreeSet;
 /**
  * @author Phuc.Le
  */
-public class Comparable {
+public class ComparableSet {
 
     public static void main(String[] args) {
         informationComparable();

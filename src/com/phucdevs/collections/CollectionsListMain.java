@@ -12,7 +12,7 @@ import java.util.Vector;
 /**
  * @author Phuc.Le
  */
-public class CollectionsMain {
+public class CollectionsListMain {
 
     public static void main(String[] args) {
         //dataStructure();

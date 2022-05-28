@@ -1,5 +1,7 @@
 package com.phucdevs.collections;
 
+import java.util.HashSet;
+
 /**
  * @author Phuc.Le
  */
@@ -7,7 +9,7 @@ public class CollectionsSetMain {
 
     public static void main(String[] args) {
         informationSet();
-        interfaceSet();
+        implementSet();
     }
 
     private static void informationSet() {
@@ -16,7 +18,7 @@ public class CollectionsSetMain {
         System.out.println("Accept heterogeneous objects");
     }
 
-    private static void interfaceSet() {
+    private static void implementSet() {
         hashSet();
     }
 
@@ -34,6 +36,16 @@ public class CollectionsSetMain {
     }
 
     private static void featureHashSet() {
+        HashSet hs = new HashSet(); // default size: 16
+        HashSet hs2 = new HashSet(100); // resize: x2
 
+        hs.add(1);
+        hs.add(true);
+        hs.add("John");
+        System.out.println(hs);
+
+        hs.add(true);
+        hs.add(null);
+        System.out.println(hs);
     }
 }

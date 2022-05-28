@@ -2,6 +2,7 @@ package com.phucdevs.collections;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Stack;
 import java.util.Vector;
 
 /**
@@ -11,7 +12,7 @@ public class CollectionsMain {
 
     public static void main(String[] args) {
         //dataStructure();
-        interfactList();
+        interfaceList();
     }
 
     private static void dataStructure() {
@@ -24,10 +25,11 @@ public class CollectionsMain {
         System.out.println(c.getName()); // Tesla
     }
 
-    private static void interfactList() {
+    private static void interfaceList() {
         arrayList();
         linkedList();
         vector();
+        stack();
     }
 
     private static void arrayList() {
@@ -71,5 +73,19 @@ public class CollectionsMain {
         System.out.println(v); // [10, John]
         v.remove(0); // [John]
         System.out.println(v.elementAt(0)); // John
+    }
+
+    private static void stack() {
+        Stack s = new Stack();
+        s.push(10);
+        s.push(30);
+        s.push(true);
+        System.out.println(s); // [10, 30, true]
+        System.out.println(s.pop()); // true
+        System.out.println(s); // [10, 30]
+        System.out.println(s.peek()); // 30
+        System.out.println(s); // [10, 30]
+        System.out.println(s.empty()); // false
+        System.out.println(s.search(10)); // 2
     }
 }

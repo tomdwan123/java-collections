@@ -22,6 +22,7 @@ public class CollectionsSetMain {
     private static void implementSet() {
         hashSet();
         linkedHashSet();
+        sortedSet();
     }
 
     private static void hashSet() {
@@ -70,5 +71,17 @@ public class CollectionsSetMain {
         LinkedHashSet lhs = new LinkedHashSet();
         LinkedHashSet lhs2 = new LinkedHashSet(30);
         LinkedHashSet lhs3 = new LinkedHashSet(20, 1.00f);
+    }
+
+    private static void sortedSet() {
+        informationSortedSet();
+    }
+
+    private static void informationSortedSet() {
+        System.out.println("Does not allow duplicates");
+        System.out.println("Insertion order is preserved asc");
+        System.out.println("Can add heterogeneous elements");
+        System.out.println("We can add null value");
+        System.out.println("Implements serializable and cloneable interface");
     }
 }

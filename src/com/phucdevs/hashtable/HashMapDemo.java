@@ -66,6 +66,13 @@ public class HashMapDemo {
         int[] numbers2 = {1, 2, 3, 4, 5};
         findTimesOccurrencesNumber(numbers1);
         findTimesOccurrencesNumber(numbers2);
+
+        String s1 = "leetcode";
+        String s2 = "loveleetcode";
+        String s3 = "aabb";
+        System.out.println(findFirstUniqueInString(s1));
+        System.out.println(findFirstUniqueInString(s2));
+        System.out.println(findFirstUniqueInString(s3));
     }
 
     /**
@@ -86,6 +93,32 @@ public class HashMapDemo {
             System.out.println(entry.getKey() + " xuất hiện "
                     + entry.getValue() + " (lần)");
         }
+    }
+
+    /**
+     * Input: Cho 1 chuỗi
+     * Output: Trả ra index của ký tự không lập lại đầu tiên
+     */
+    private static int findFirstUniqueInString(String s) {
+        Map<Character, Integer> mapChars = new HashMap<>();
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (mapChars.containsKey(c)) {
+                mapChars.put(c, mapChars.get(c) + 1);
+            } else {
+                mapChars.put(c, 1);
+            }
+        }
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (mapChars.get(c) == 1) {
+                return i;
+            }
+        }
+
+
+        return -1;
     }
 }
 

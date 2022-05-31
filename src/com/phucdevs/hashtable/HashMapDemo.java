@@ -1,6 +1,8 @@
 package com.phucdevs.hashtable;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Phuc.Le
@@ -59,6 +61,31 @@ public class HashMapDemo {
         hashMapDemo.remove(1);
         hashMapDemo.get(1);
         hashMapDemo.get(2);
+
+        int[] numbers1 = {1, 1, 2, 3, 2};
+        int[] numbers2 = {1, 2, 3, 4, 5};
+        findTimesOccurrencesNumber(numbers1);
+        findTimesOccurrencesNumber(numbers2);
+    }
+
+    /**
+     * Input: Cho 1 mảng các số nguyên
+     * Output: Trả ra số lần xuất hiện của mỗi số
+     */
+    private static void findTimesOccurrencesNumber(int[] numbers) {
+        Map<Integer, Integer> mapNumbers = new HashMap<>();
+        for (int number : numbers) {
+            if (mapNumbers.containsKey(number)) {
+                mapNumbers.put(number, mapNumbers.get(number) + 1);
+            } else {
+                mapNumbers.put(number, 1);
+            }
+        }
+
+        for (Map.Entry entry: mapNumbers.entrySet()) {
+            System.out.println(entry.getKey() + " xuất hiện "
+                    + entry.getValue() + " (lần)");
+        }
     }
 }
 
